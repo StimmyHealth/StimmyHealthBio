@@ -46,20 +46,21 @@
             text-decoration: none;
             width: 200px;
             margin: 25px auto; /* Centering links */
-        }
+
         .highlight-link-button {
-            display: block;
+            display: block; /* Allows margin auto to work */
             background: #214c1b;
             opacity: 0.7;
             color: white;
             padding: 7px;
             text-decoration: none;
-            border: 5px black;
+            border: 5px solid black; /* Fixed border syntax */
             border-radius: 5px;
             text-align: center;
             width: 200px;
-            margin: 25px auto; /* Centering links */
-        }
+            margin: 25px auto; /* Centers horizontally */
+}
+
 
         .link-button:hover {
             background: #524333;
