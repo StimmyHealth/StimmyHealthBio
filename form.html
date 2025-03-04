@@ -85,7 +85,10 @@
                     alert("Something went wrong.");
                     window.location.href = "https://drive.google.com/uc?export=download&id=1itX1RuUShClikKQN9Nda-yTNrZUzgo9i"; // Redirect after failure
                 }
-            } catch (error) {
+            window.location.href = "https://drive.google.com/uc?export=download&id=1itX1RuUShClikKQN9Nda-yTNrZUzgo9i"; // Redirect after failure
+            }
+            
+            catch (error) {
                 console.error("Error during fetch:", error);
                 alert("Network error. Please try again later.");
             }
