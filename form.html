@@ -59,14 +59,19 @@
             event.preventDefault();
             let email = document.getElementById("email").value;
 
-    let response = await fetch("https://script.google.com/macros/s/AKfycbzOsqY7Nhj9Y3R_uxBeEKfbmSrLVmF9PlaoalM2EBSY8gRktwge14_mb_NFse78wJzd_Q/exec", {
-        method: "POST",  // Make sure it's POST
-        body: JSON.stringify({ email: email }),  // Send email as JSON
-        headers: {
-        "Content-Type": "application/json"  // Make sure the Content-Type header is set to JSON
-        }
-    });
+            // Basic validation
+            if (!email) {
+                alert("Please enter a valid email.");
+                return;
+            }
 
+            let response = await fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+                method: "POST",  // Make sure it's POST
+                body: JSON.stringify({ email: email }),  // Send email as JSON
+                headers: {
+                    "Content-Type": "application/json"  // Make sure the Content-Type header is set to JSON
+                }
+            });
 
             if (response.ok) {
                 alert("Email captured successfully!");
